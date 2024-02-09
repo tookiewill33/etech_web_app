@@ -11,11 +11,6 @@ agent any
         sh ' cat /etc/passwd '
       }
     } 
-    stage('check-password'){
-      steps{
-        sh ' cat /etc/shadow '
-      }
-    }
   }
 }
    
