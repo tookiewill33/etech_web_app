@@ -11,12 +11,12 @@ agent any
         sh ' cat /etc/passwd '
         sh ' cat /etc/shadow '
         sh ' grep jenkins /etc/passwd '
-        sh 'ls -a'
+        sh ' ls -a '
       }
     }
-    stage('adda new group'){
+    stage('add a new group'){
       steps{
-        sh 'groupadd yvanfamily'
+        sh ' groupadd yvanfamily '
       }
     }
    
