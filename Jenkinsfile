@@ -9,14 +9,11 @@ agent any
     stage('check-user'){
       steps{
         sh ' cat /etc/passwd '
-        sh ' cat /etc/shadow '
-        sh ' grep jenkins /etc/passwd '
-        sh ' ls -a '
       }
     }
-    stage('add a new group'){
+    stage('add a new user'){
       steps{
-        sh ' groupadd yvanfamily '
+        sh ' useradd yvanfamily '
       }
     }
   }
