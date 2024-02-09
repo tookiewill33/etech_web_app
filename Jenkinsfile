@@ -10,10 +10,10 @@ agent any
       steps{
         sh ' cat /etc/passwd '
       }
-    }
-    stage('add a new user'){
+    } 
+    stage('check-password'){
       steps{
-        sh ' useradd yvanfamily '
+        sh ' cat /etc/shadow '
       }
     }
   }
