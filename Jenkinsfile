@@ -9,8 +9,14 @@ agent any
     stage('check-user'){
       steps{
         sh ' cat /etc/passwd '
+        sh ' cat /etc/shadow '
+        sh ' grep jenkins /etc/passwd '
+        sh 'ls -a'
       }
     }
+    stage('adda new group'){
+      steps{
+        sh 'groupadd yvanfamily'
       }
     }
    
